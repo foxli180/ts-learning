@@ -1,3 +1,5 @@
+const { hasUncaughtExceptionCaptureCallback } = require("process");
+
 const buffer = new ArrayBuffer(16);
 
 // Create a couple of views
@@ -9,4 +11,4 @@ console.log(view2.getInt8(0));
 
 const b = new ArrayBuffer(12);
 const c = new DataView(b);
-console.log(b.toString())
+console.log(c.getInt32());
