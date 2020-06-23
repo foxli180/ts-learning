@@ -7,7 +7,8 @@
     "test": "jest",
     "test-it": "jest --config jest.config-it.js",
     "test-it-c": "jest --coverage --config jest.config-it.js",
-    "lint": "eslint src/**/*.ts"
+    "lint": "eslint -c .eslintrc.js 'src/**/*.ts'",
+    "precise-commits": "precise-commits"
   },
   "dependencies": {
     "@types/ioredis": "^4.14.9",
@@ -47,6 +48,7 @@
     "husky": "^4.2.5",
     "jest": "^25.1.0",
     "jose": "^1.27.1",
+    "precise-commits": "^1.0.2",
     "prettier": "^1.19.1",
     "ts-jest": "^25.2.1",
     "ts-node": "^8.6.2",
@@ -54,7 +56,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn tslint -c tslint.json 'src/**/*.ts'"
+      "pre-commit": "yarn run  lint &&yarn run precise-commits"
     }
   }
 }

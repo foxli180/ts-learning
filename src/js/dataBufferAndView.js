@@ -1,4 +1,4 @@
-const { hasUncaughtExceptionCaptureCallback } = require("process");
+const { hasUncaughtExceptionCaptureCallback } = require('process');
 
 const buffer = new ArrayBuffer(16);
 
