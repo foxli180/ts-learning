@@ -1,6 +1,3 @@
-    console.log('bad')
-function  dsadsa() {
-   console.log(
-     'xxxxx'
-   )
-}
+import { createConnection } from 'typeorm';
+
+createConnection();

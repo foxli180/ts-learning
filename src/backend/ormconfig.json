@@ -1,0 +1,21 @@
+{
+  "type": "sqlite",
+  "database": "db.sqlite3",
+  "autoSchemaSync": true,
+  "synchronize": true,
+  "logging": true,
+  "entities:": [
+    "entity/**/*.ts"
+  ],
+  "migrations": [
+    "migration/**/*.ts"
+  ],
+  "subscribers": [
+    "subscriber/**/*.ts"
+  ],
+  "cli": {
+    "entitiesDir": "entity",
+    "migrationsDir": "migration",
+    "subscribersDir": "subscriber"
+  }
+}
