@@ -1,4 +1,4 @@
-function printLabel(labeledObj: LabeledValue) {
+function printLabel(labeledObj: LabeledValue): void {
   console.log(labeledObj.label);
 }
 interface LabeledValue {
@@ -17,7 +17,7 @@ interface SearchFunc {
   (source: string, subString: string): boolean;
 }
 
-const mySearch: SearchFunc = function(source, sub) {
+const mySearch: SearchFunc = function(source, sub): boolean {
   const result = source.search(sub);
   return result > -1;
 };

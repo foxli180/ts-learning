@@ -11,15 +11,15 @@ function identity<T>(args: T): T {
   return args;
 }
 
-let output = identity('myString');
-let myIdentity: GenericIdentityFn<number> = identity;
+const output = identity('myString');
+const myIdentity: GenericIdentityFn<number> = identity;
 
 class GenericNumber<T> {
   zeroValue!: T;
   add!: (x: T, y: T) => T;
 }
 
-let myGenericNumber = new GenericNumber<number>();
+const myGenericNumber = new GenericNumber<number>();
 myGenericNumber.zeroValue = 0;
 myGenericNumber.add = function(x, y) {
   return x + y;
