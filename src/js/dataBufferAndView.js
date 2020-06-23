@@ -7,5 +7,6 @@ view1.setInt8(12, 42); // put 42 in slot 12
 console.log(buffer);
 console.log(view2.getInt8(0));
 
-const b = new Buffer(12);
+const b = new ArrayBuffer(12);
 const c = new DataView(b);
+console.log(b.toString())
